@@ -1,0 +1,74 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade In/Fade Out Image</title>
+    <style>
+
+      #myImage {
+        display: none;
+        /* Initially hidden */
+        transition: opacity 1s;
+        /* Smooth fade effect */
+      }
+
+      main {
+        padding: 300;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: calibri;
+        background-image: linear-gradient(to bottom, hotpink, lavender);
+
+      }
+
+      button {
+        font-family: calibri;
+
+      }
+    </style>
+  </head>
+
+
+  <div id="grad"></div>
+
+  <body>
+
+    <main>
+      <h1>
+        Love or Not?
+      </h1>
+      <!-- Image container -->
+
+      <button onclick="fadeInImage()">Loves Me??</button>
+      <button onclick="fadeOutImage()">Loves Me Not :(</button>
+
+      <img id="myImage" src="https://clipart.info/images/ccovers/1580998938Heart-Red-Png-Clip-Art-Image.png" style="width: 150px; height: 150px;" alt="My Image">
+
+      <!-- Buttons to trigger fade in/out -->
+
+      <script>
+        // Function to fade in the image
+        function fadeInImage() {
+          const image = document.getElementById('myImage');
+          image.style.opacity = 1;
+          image.style.display = 'block';
+        }
+
+        // fade out
+        function fadeOutImage() {
+          const image = document.getElementById('myImage');
+          image.style.opacity = 0;
+          setTimeout(() => {
+            image.style.display = 'none'; 
+          }, 1000); 
+        }
+      </script>
+    </main>
+
+
+  </body>
+
+</html>
